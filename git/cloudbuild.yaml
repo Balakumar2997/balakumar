@@ -15,7 +15,7 @@ steps:
 # The Dockerfile here uses this git builder as its base image.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=version_file', '.']
-  dir: '.'
+  dir: './git'
 - name: 'version_file'
   args: ['VERSION']
   dir: './git'
