@@ -15,14 +15,14 @@ steps:
 # The Dockerfile here uses this git builder as its base image.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=version_file', '.']
-  dir: 'examples/version-file'
+  dir: '.'
 - name: 'version_file'
   args: ['VERSION']
-  dir: 'examples/version-file/cloud-builders'
+  dir: './git'
 # Prove that the file exists.
 - name: 'alpine'
   args: ['ash', '-c', 'echo "Version: $(cat VERSION)"']
-  dir: 'examples/version-file/cloud-builders'
+  dir: './git'
 
 # Set a global configuration and check that it's persisted.
 # This configuration won't be included in the resulting builder image.
