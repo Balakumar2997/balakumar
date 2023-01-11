@@ -16,9 +16,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=version_file', '.']
   dir: './git'
-- name: 'version_file'
-  args: ['VERSION']
-  dir: './git'
+
 # Prove that the file exists.
 - name: 'alpine'
   args: ['ash', '-c', 'echo "Version: $(cat VERSION)"']
