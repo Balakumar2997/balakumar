@@ -34,11 +34,11 @@ steps:
 #- name: 'gcr.io/$PROJECT_ID/git'
  # args: ['clone', 'https://source.developers.google.com/p/$PROJECT_ID/r/github_balakumar2997_balakumar']
 
-images:
-- 'gcr.io/$PROJECT_ID/git'
-- 'europe-docker.pkg.dev/$PROJECT_ID/ga/v1/git'
-- 'asia-docker.pkg.dev/$PROJECT_ID/ga/v1/git'
-- 'us-docker.pkg.dev/$PROJECT_ID/ga/v1/git'
+#images:
+#- 'gcr.io/$PROJECT_ID/git'
+#- 'europe-docker.pkg.dev/$PROJECT_ID/ga/v1/git'
+#- 'asia-docker.pkg.dev/$PROJECT_ID/ga/v1/git'
+#- 'us-docker.pkg.dev/$PROJECT_ID/ga/v1/git'
 
 timeout: 1800s
 
